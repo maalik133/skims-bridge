@@ -39,13 +39,13 @@
       border: 1px solid var(--border);
     }
 
-    /* LOGO */
-    .logo-img {
-      display: block;
-      margin: 0 auto 12px;
-      max-width: 180px;
-      width: 100%;
-      border-radius: 12px;
+    .logo {
+      text-align: center;
+      font-size: 22px;
+      letter-spacing: 6px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
     }
 
     .top {
@@ -53,6 +53,7 @@
       justify-content: space-between;
       font-size: 12px;
       margin-bottom: 10px;
+      color: var(--muted);
     }
 
     .progress {
@@ -75,6 +76,7 @@
       font-size: 22px;
       margin: 0 0 6px;
       text-align: center;
+      line-height: 1.2;
     }
 
     .highlight {
@@ -86,6 +88,7 @@
       color: var(--muted);
       margin-bottom: 14px;
       text-align: center;
+      line-height: 1.45;
     }
 
     .box {
@@ -99,22 +102,28 @@
     .row {
       display: flex;
       gap: 10px;
+      align-items: flex-start;
     }
 
     .check {
       color: var(--accent-2);
       font-weight: bold;
+      font-size: 16px;
+      line-height: 1;
+      margin-top: 2px;
     }
 
     .small {
       font-size: 12px;
       color: var(--muted);
+      line-height: 1.45;
     }
 
     .center {
       text-align: center;
       font-size: 13px;
       margin-top: 10px;
+      color: var(--text);
     }
 
     .cta {
@@ -147,21 +156,17 @@
 <div class="container">
   <div class="card">
 
-    <!-- LOGO -->
-    <img src="/mnt/data/485a284a-dac4-4320-80d3-53aa2e9c318b.png" class="logo-img">
+    <div class="logo">SKIMS</div>
 
-    <!-- STEP + LABEL -->
     <div class="top">
       <div id="stepText">Step 1 of 2</div>
       <div>SKIMS $750 Gift Card</div>
     </div>
 
-    <!-- PROGRESS -->
     <div class="progress">
       <span id="bar"></span>
     </div>
 
-    <!-- HEADLINE -->
     <h1>
       Unlock your <span class="highlight">SKIMS $750 Gift Card</span>
     </h1>
@@ -170,13 +175,12 @@
       Review the quick steps so you know what to expect before continuing.
     </div>
 
-    <!-- CHECKLIST -->
     <div class="box">
       <div class="row">
         <div class="check">✔</div>
         <div>
           <strong>Complete 3–5 required deals</strong><br>
-          <span class="small">Includes apps, surveys, or trial offers.</span>
+          <span class="small">These may include app installs, surveys, or trial offers.</span>
         </div>
       </div>
     </div>
@@ -186,7 +190,7 @@
         <div class="check">✔</div>
         <div>
           <strong>Use a valid email address</strong><br>
-          <span class="small">Used for updates and progress tracking.</span>
+          <span class="small">This is used for progress-related updates and next steps.</span>
         </div>
       </div>
     </div>
@@ -196,12 +200,11 @@
         <div class="check">✔</div>
         <div>
           <strong>Must be 18+ to participate</strong><br>
-          <span class="small">Requirements may vary by user.</span>
+          <span class="small">Eligibility requirements apply, and deal paths may vary by user.</span>
         </div>
       </div>
     </div>
 
-    <!-- WHAT NEXT -->
     <div class="box">
       <strong>What happens next?</strong><br>
       <span class="small">
@@ -210,10 +213,9 @@
     </div>
 
     <div class="center">
-      Tap below to continue and start
+      Tap below to continue and start the steps.
     </div>
 
-    <!-- CTA -->
     <a href="#" class="cta" id="ctaBtn">
       Continue to Next Step →
     </a>
