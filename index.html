@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>$750 Gift Card Steps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SKIMS $750 Gift Card</title>
+
   <style>
     :root {
       --bg: #f5efe8;
@@ -12,89 +13,68 @@
       --muted: #7a685d;
       --accent: #b79f8a;
       --accent-2: #8c7462;
-      --border: rgba(47, 36, 29, 0.10);
-      --shadow: 0 14px 32px rgba(47, 36, 29, 0.08);
+      --border: rgba(47,36,29,0.1);
     }
 
     * { box-sizing: border-box; }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-
     body {
-      min-height: 100vh;
-      padding: 18px;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      padding: 16px;
     }
 
-    .wrap {
+    .container {
       width: 100%;
-      max-width: 480px;
+      max-width: 420px;
     }
 
     .card {
       background: var(--card);
+      border-radius: 20px;
+      padding: 18px;
       border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 20px;
-      box-shadow: var(--shadow);
     }
 
-    .topbar {
+    /* LOGO */
+    .logo-img {
+      display: block;
+      margin: 0 auto 12px;
+      max-width: 180px;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .top {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
+      font-size: 12px;
       margin-bottom: 10px;
     }
 
-    .status,
-    .tag {
-      display: inline-block;
-      font-size: 0.76rem;
-      font-weight: 700;
-      padding: 7px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: #f9f3ee;
-      color: var(--text);
-    }
-
-    .tag {
-      color: var(--accent-2);
-      background: #f2e8df;
-    }
-
     .progress {
-      width: 100%;
       height: 8px;
-      background: rgba(47, 36, 29, 0.08);
+      background: #e6ddd5;
       border-radius: 999px;
       overflow: hidden;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .progress span {
       display: block;
-      width: 50%;
       height: 100%;
+      width: 50%;
       background: linear-gradient(90deg, var(--accent-2), var(--accent));
       transition: width 0.4s ease;
     }
 
     h1 {
-      font-size: clamp(1.8rem, 6vw, 2.4rem);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin: 0;
+      font-size: 22px;
+      margin: 0 0 6px;
+      text-align: center;
     }
 
     .highlight {
@@ -102,209 +82,168 @@
     }
 
     .sub {
-      margin: 12px 0 0;
+      font-size: 13px;
       color: var(--muted);
-      font-size: 0.98rem;
-      line-height: 1.5;
+      margin-bottom: 14px;
+      text-align: center;
     }
 
-    .steps {
-      margin-top: 18px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .step {
-      display: grid;
-      grid-template-columns: 28px 1fr;
-      gap: 12px;
-      align-items: start;
-      padding: 14px;
+    .box {
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 10px;
       background: #fdf9f5;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
     }
 
     .check {
-      width: 24px;
-      height: 24px;
-      border-radius: 999px;
-      background: rgba(183, 159, 138, 0.22);
       color: var(--accent-2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 0.9rem;
-      margin-top: 1px;
+      font-weight: bold;
     }
 
-    .step strong {
-      display: block;
-      font-size: 0.97rem;
-      margin-bottom: 4px;
-    }
-
-    .step p {
-      margin: 0;
+    .small {
+      font-size: 12px;
       color: var(--muted);
-      font-size: 0.9rem;
-      line-height: 1.45;
     }
 
-    .mini {
-      margin-top: 14px;
-      padding: 14px;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      background: #fdf9f5;
-    }
-
-    .mini strong {
-      display: block;
-      font-size: 0.95rem;
-      margin-bottom: 4px;
-    }
-
-    .mini p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-      line-height: 1.45;
-    }
-
-    .precta {
-      margin-top: 16px;
+    .center {
       text-align: center;
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: var(--text);
+      font-size: 13px;
+      margin-top: 10px;
     }
 
     .cta {
+      margin-top: 12px;
       display: block;
-      width: 100%;
-      margin-top: 10px;
       text-align: center;
-      text-decoration: none;
-      border: none;
-      border-radius: 16px;
-      padding: 16px;
-      font-size: 1rem;
-      font-weight: 800;
-      color: #fffaf6;
       background: linear-gradient(90deg, var(--accent-2), var(--accent));
-      box-shadow: 0 10px 22px rgba(140, 116, 98, 0.22);
-      cursor: pointer;
-      transition: transform 0.12s ease, opacity 0.12s ease;
+      color: white;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s;
     }
 
     .cta:active {
-      transform: scale(0.99);
+      transform: scale(0.98);
     }
 
-    .cta.loading {
-      opacity: 0.9;
-      pointer-events: none;
-    }
-
-    .micro {
-      margin-top: 10px;
+    .fine {
+      font-size: 11px;
       text-align: center;
-      font-size: 0.8rem;
       color: var(--muted);
-      line-height: 1.45;
-    }
-
-    @media (max-width: 420px) {
-      body { padding: 12px; }
-      .card { padding: 16px; border-radius: 20px; }
-      h1 { font-size: 1.7rem; }
-      .step { padding: 12px; }
+      margin-top: 8px;
     }
   </style>
 </head>
+
 <body>
-  <main class="wrap">
-    <section class="card">
-      <div class="topbar">
-        <span class="status" id="statusText">Step 1 of 2</span>
-        <span class="tag">$750 Gift Card</span>
-      </div>
+<div class="container">
+  <div class="card">
 
-      <div class="progress">
-        <span id="progressBar"></span>
-      </div>
+    <!-- LOGO -->
+    <img src="/mnt/data/485a284a-dac4-4320-80d3-53aa2e9c318b.png" class="logo-img">
 
-      <h1>
-        Complete the steps below to unlock your
-        <span class="highlight">$750 gift card</span>
-      </h1>
+    <!-- STEP + LABEL -->
+    <div class="top">
+      <div id="stepText">Step 1 of 2</div>
+      <div>SKIMS $750 Gift Card</div>
+    </div>
 
-      <p class="sub">
-        Review the quick start guide so you know what to expect before continuing.
-      </p>
+    <!-- PROGRESS -->
+    <div class="progress">
+      <span id="bar"></span>
+    </div>
 
-      <div class="steps">
-        <div class="step">
-          <div class="check">✓</div>
-          <div>
-            <strong>Complete 3–5 required deals</strong>
-            <p>These may include app installs, surveys, or trial offers.</p>
-          </div>
-        </div>
+    <!-- HEADLINE -->
+    <h1>
+      Unlock your <span class="highlight">SKIMS $750 Gift Card</span>
+    </h1>
 
-        <div class="step">
-          <div class="check">✓</div>
-          <div>
-            <strong>Use a valid email address</strong>
-            <p>This is used for progress-related updates and next steps.</p>
-          </div>
-        </div>
+    <div class="sub">
+      Review the quick steps so you know what to expect before continuing.
+    </div>
 
-        <div class="step">
-          <div class="check">✓</div>
-          <div>
-            <strong>Must be 18+ to participate</strong>
-            <p>Eligibility requirements apply, and deal paths may vary by user.</p>
-          </div>
+    <!-- CHECKLIST -->
+    <div class="box">
+      <div class="row">
+        <div class="check">✔</div>
+        <div>
+          <strong>Complete 3–5 required deals</strong><br>
+          <span class="small">Includes apps, surveys, or trial offers.</span>
         </div>
       </div>
+    </div>
 
-      <div class="mini">
-        <strong>What happens next?</strong>
-        <p>You’ll continue to the next page where you can begin the required steps.</p>
+    <div class="box">
+      <div class="row">
+        <div class="check">✔</div>
+        <div>
+          <strong>Use a valid email address</strong><br>
+          <span class="small">Used for updates and progress tracking.</span>
+        </div>
       </div>
+    </div>
 
-      <p class="precta">Tap below to continue and start the steps.</p>
+    <div class="box">
+      <div class="row">
+        <div class="check">✔</div>
+        <div>
+          <strong>Must be 18+ to participate</strong><br>
+          <span class="small">Requirements may vary by user.</span>
+        </div>
+      </div>
+    </div>
 
-      <button class="cta" id="ctaBtn">
-        Continue to Next Step →
-      </button>
+    <!-- WHAT NEXT -->
+    <div class="box">
+      <strong>What happens next?</strong><br>
+      <span class="small">
+        Continue to the next page to begin the required steps.
+      </span>
+    </div>
 
-      <p class="micro">
-        Eligibility and completion requirements apply.
-      </p>
-    </section>
-  </main>
+    <div class="center">
+      Tap below to continue and start
+    </div>
 
-  <script>
-    const TRACKING_LINK = "https://linkthem.net/aff_c?offer_id=3993&aff_id=170653";
+    <!-- CTA -->
+    <a href="#" class="cta" id="ctaBtn">
+      Continue to Next Step →
+    </a>
 
-    const ctaBtn = document.getElementById("ctaBtn");
-    const progressBar = document.getElementById("progressBar");
-    const statusText = document.getElementById("statusText");
+    <div class="fine">
+      Eligibility and completion requirements apply.
+    </div>
 
-    ctaBtn.addEventListener("click", function () {
-      ctaBtn.classList.add("loading");
-      ctaBtn.textContent = "Continuing...";
-      progressBar.style.width = "100%";
-      statusText.textContent = "Step 2 of 2";
+  </div>
+</div>
 
-      setTimeout(() => {
-        window.location.href = TRACKING_LINK;
-      }, 650);
-    });
-  </script>
+<script>
+  const LINK = "https://linkthem.net/aff_c?offer_id=3993&aff_id=170653";
+
+  const btn = document.getElementById("ctaBtn");
+  const bar = document.getElementById("bar");
+  const step = document.getElementById("stepText");
+
+  btn.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    bar.style.width = "100%";
+    step.textContent = "Step 2 of 2";
+    btn.textContent = "Continuing...";
+
+    setTimeout(() => {
+      window.location.href = LINK;
+    }, 600);
+  });
+</script>
+
 </body>
 </html>
